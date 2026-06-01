@@ -1,0 +1,40 @@
+<svg width="820" height="360" viewBox="0 0 820 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Avietho Digital</title>
+  <desc id="desc">White Avietho wordmark with gold center mark and Digital text below.</desc>
+  <g filter="url(#soften)">
+    <path d="M28 210L92 64H150L214 210H158L148 184H92L82 210H28ZM108 144H132L120 104L108 144Z" fill="#fff"/>
+    <path d="M204 64H260L296 158L332 64H388L322 210H270L204 64Z" fill="#fff"/>
+    <path d="M420 64H556V108H505V210H455V108H420V64Z" fill="#fff"/>
+    <path d="M558 64H608V116H662V64H712V210H662V161H608V210H558V64Z" fill="#fff"/>
+    <path d="M736 63C780 63 812 94 812 137C812 180 780 211 736 211C692 211 660 180 660 137C660 94 692 63 736 63ZM736 109C719 109 707 121 707 137C707 153 719 165 736 165C753 165 765 153 765 137C765 121 753 109 736 109Z" fill="#fff"/>
+  </g>
+  <g transform="translate(337 58) rotate(15)">
+    <path d="M34 0H92L58 146H0L34 0Z" fill="url(#gold)"/>
+    <path d="M102 18L222 56L201 108L111 80L102 18Z" fill="url(#gold)"/>
+    <path d="M91 104L182 133L161 185L70 157L91 104Z" fill="url(#gold)"/>
+    <path d="M188 55L228 67L184 184L143 171L188 55Z" fill="url(#gold)"/>
+  </g>
+  <g transform="translate(370 10)">
+    <circle cx="34" cy="34" r="24" stroke="url(#gold)" stroke-width="9"/>
+    <path d="M34 15V34L48 42" stroke="url(#gold)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24 58H44L39 78H29L24 58Z" fill="url(#gold)"/>
+  </g>
+  <g fill="#fff">
+    <path d="M174 296V251H201C216 251 226 260 226 273C226 287 216 296 201 296H174ZM195 280H200C203 280 205 278 205 273C205 269 203 267 200 267H195V280Z"/>
+    <path d="M266 296V251H287V296H266Z"/>
+    <path d="M350 297C333 297 322 288 322 273C322 259 333 250 350 250C361 250 370 254 375 262L358 270C356 267 353 266 350 266C346 266 343 269 343 273C343 278 346 281 351 281C354 281 357 280 359 278H349V268H378V296H364L362 292C358 295 354 297 350 297Z"/>
+    <path d="M418 296V251H439V296H418Z"/>
+    <path d="M489 296V268H474V251H525V268H510V296H489Z"/>
+    <path d="M550 296L570 251H592L612 296H590L587 289H575L572 296H550ZM579 277H584L582 268L579 277Z"/>
+    <path d="M648 296V251H669V279H695V296H648Z"/>
+  </g>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="220" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5C542"/>
+      <stop offset="1" stop-color="#FFB21A"/>
+    </linearGradient>
+    <filter id="soften" x="0" y="50" width="830" height="180" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="1" stdDeviation="0.6" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+</svg>
