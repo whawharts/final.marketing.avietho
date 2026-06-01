@@ -61,11 +61,7 @@
               <p class="projects-featured-description">
                 A strategic online visibility campaign built around media relations, influencer coordination, reputation support, and audience engagement.
               </p>
-              <div class="projects-featured-metrics" aria-label="Campaign results">
-                <strong>250% <span>Visibility Increase</span></strong>
-                <strong>48K+ <span>Audience Reach</span></strong>
-              </div>
-              <a class="button projects-featured-cta" href="./contact.html">View Case Study</a>
+              <button class="button projects-featured-cta" type="button" data-project-open="digital-pr-campaign" aria-haspopup="dialog">View Case Study</button>
             </div>
           </article>
 
@@ -85,59 +81,91 @@
               <p class="projects-category">Digital PR</p>
               <h2>Online Media Relations</h2>
               <p>Coordinated media outreach, public visibility, and influencer-aligned communication.</p>
+              <button class="project-card-link" type="button" data-project-open="online-media-relations" aria-haspopup="dialog">View Project <span aria-hidden="true">&rarr;</span></button>
             </article>
             <article class="project-portfolio-card" data-project-category="social-media">
               <div class="project-portfolio-image"><img src="./assets/avietho-facebook-proof.png" alt="Social media management campaign visual"></div>
               <p class="projects-category">Social Media</p>
               <h2>Social Media Management</h2>
               <p>Content planning, community engagement, and campaign-ready platform execution.</p>
+              <button class="project-card-link" type="button" data-project-open="social-media-management" aria-haspopup="dialog">View Project <span aria-hidden="true">&rarr;</span></button>
             </article>
             <article class="project-portfolio-card" data-project-category="video-production">
               <div class="project-portfolio-image"><img src="./assets/sample 1.png" alt="Corporate video production visual"></div>
               <p class="projects-category">Video Production</p>
               <h2>Corporate Video Production</h2>
               <p>Professional business, marketing, and institutional video content.</p>
+              <button class="project-card-link" type="button" data-project-open="corporate-video-production" aria-haspopup="dialog">View Project <span aria-hidden="true">&rarr;</span></button>
             </article>
             <article class="project-portfolio-card" data-project-category="live-streaming">
               <div class="project-portfolio-image"><img src="./assets/proof-sample-2.png" alt="Live streaming services visual"></div>
               <p class="projects-category">Live Streaming</p>
               <h2>Live Streaming Services</h2>
               <p>Multi-platform event coverage, broadcast support, and live audience delivery.</p>
+              <button class="project-card-link" type="button" data-project-open="live-streaming-services" aria-haspopup="dialog">View Project <span aria-hidden="true">&rarr;</span></button>
             </article>
             <article class="project-portfolio-card" data-project-category="video-production">
               <div class="project-portfolio-image"><img src="./assets/sample 2.png" alt="Event videography visual"></div>
               <p class="projects-category">Video Production</p>
               <h2>Event Videography</h2>
               <p>Coverage for conferences, public events, weddings, concerts, and launches.</p>
+              <button class="project-card-link" type="button" data-project-open="event-videography" aria-haspopup="dialog">View Project <span aria-hidden="true">&rarr;</span></button>
             </article>
             <article class="project-portfolio-card" data-project-category="post-production">
               <div class="project-portfolio-image"><img src="./assets/proof-sample-3.png" alt="Video post-production visual"></div>
               <p class="projects-category">Post-Production</p>
               <h2>Video Post-Production</h2>
               <p>Editing, color grading, motion graphics, and final campaign-ready delivery.</p>
+              <button class="project-card-link" type="button" data-project-open="video-post-production" aria-haspopup="dialog">View Project <span aria-hidden="true">&rarr;</span></button>
             </article>
             <article class="project-portfolio-card" data-project-category="digital-pr">
               <div class="project-portfolio-image"><img src="./assets/proof-sample-4.png" alt="Online reputation management visual"></div>
               <p class="projects-category">Digital PR</p>
               <h2>Online Reputation Management</h2>
               <p>Brand monitoring, visibility support, and digital reputation strategy.</p>
+              <button class="project-card-link" type="button" data-project-open="online-reputation-management" aria-haspopup="dialog">View Project <span aria-hidden="true">&rarr;</span></button>
             </article>
             <article class="project-portfolio-card" data-project-category="video-production">
               <div class="project-portfolio-image"><img src="./assets/sample 3.png" alt="Drone videography visual"></div>
               <p class="projects-category">Video Production</p>
               <h2>Drone Videography</h2>
               <p>Aerial video and photography for campaigns, events, and branded content.</p>
+              <button class="project-card-link" type="button" data-project-open="drone-videography" aria-haspopup="dialog">View Project <span aria-hidden="true">&rarr;</span></button>
             </article>
             <article class="project-portfolio-card" data-project-category="video-marketing">
               <div class="project-portfolio-image"><img src="./assets/avietho-concept-screen.png" alt="Video marketing and SEO visual"></div>
               <p class="projects-category">Video Marketing</p>
               <h2>Video Marketing &amp; SEO</h2>
               <p>Optimized video content, platform publishing, and analytics-informed improvement.</p>
+              <button class="project-card-link" type="button" data-project-open="video-marketing-seo" aria-haspopup="dialog">View Project <span aria-hidden="true">&rarr;</span></button>
             </article>
           </div>
 
         </div>
       </section>
+
+      <dialog class="project-dialog" data-project-dialog aria-labelledby="project-dialog-title">
+        <div class="project-dialog-shell">
+          <button class="project-dialog-close" type="button" data-project-close>Close</button>
+          <div class="project-dialog-media">
+            <img data-project-dialog-image src="" alt="">
+          </div>
+          <p class="projects-kicker" data-project-dialog-category></p>
+          <h2 id="project-dialog-title" data-project-dialog-title></h2>
+          <p class="project-dialog-description" data-project-dialog-description></p>
+          <div class="project-dialog-grid">
+            <div>
+              <p class="project-dialog-label">Related Services</p>
+              <p data-project-dialog-services></p>
+            </div>
+            <div>
+              <p class="project-dialog-label">Purpose</p>
+              <p data-project-dialog-outcome></p>
+            </div>
+          </div>
+          <a class="button button-secondary" href="./contact.html">Start a Related Inquiry</a>
+        </div>
+      </dialog>
 
       <section class="section final-cta section-black">
         <div class="container cta-panel">
@@ -168,10 +196,11 @@
           </div>
           <nav class="footer-column" aria-label="Footer services">
             <h3>Services</h3>
+            <a href="./services.html">Digital PR</a>
             <a href="./services.html">Social Media</a>
-            <a href="./services.html">Video Production</a>
-            <a href="./services.html">PR & Outreach</a>
-            <a href="./services.html">Web Dev</a>
+            <a href="./services.html">Web Development</a>
+            <a href="./services.html">Multimedia &amp; Branding</a>
+            <a href="./services.html">Video &amp; Live Streaming</a>
           </nav>
           <nav class="footer-column" aria-label="Footer company">
             <h3>Company</h3>

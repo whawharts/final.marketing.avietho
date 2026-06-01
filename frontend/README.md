@@ -7,7 +7,7 @@ Static, frontend-only implementation for `marketing.aviethodigital.com`.
 - `index.html` - hardcoded public website content and section structure
 - `services.html` - standalone services page
 - `projects.html` - standalone project/case-study page
-- `about.html` - standalone about, proof, team, and process page
+- `about.html` - standalone about, proof, identity, and team page
 - `contact.html` - standalone contact, inquiry, and partnership page
 - `styles.css` - fixed Avietho brand system, responsive layout, and components
 - `script.js` - mobile navigation and header state
