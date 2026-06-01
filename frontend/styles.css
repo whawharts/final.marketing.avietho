@@ -4,19 +4,32 @@
   --graphite: #2b2925;
   --ivory: #f8f3e7;
   --gray: #b8b2a7;
+  --muted-light: #e2dcd0;
   --gold: #d7ad45;
   --amber: #e3b84f;
+  --surface-deep: #0b0b0a;
+  --surface-soft: #10100f;
+  --surface-ink: #090909;
+  --surface-panel: #101010;
+  --surface-card: #0f0f0f;
+  --surface-card-deep: #0c0c0b;
+  --body-font: Inter, Arial, sans-serif;
+  --display-font: "Playfair Display", Georgia, serif;
   --line: rgba(184, 178, 167, 0.2);
   --line-strong: rgba(184, 178, 167, 0.34);
   --gold-line: rgba(215, 173, 69, 0.48);
   --body-size: 16px;
   --small-size: 12px;
+  --label-size: 11px;
+  --label-tracking: 0.14em;
+  --cta-size: 12px;
+  --cta-tracking: 0.12em;
   --item-title-size: clamp(23px, 2vw, 30px);
   --section-title-size: clamp(36px, 4.8vw, 58px);
   --page-title-size: clamp(54px, 6.3vw, 86px);
   --section-space: clamp(82px, 7vw, 124px);
   --max: 1440px;
-  --radius: 6px;
+  --radius: 4px;
 }
 
 * {
@@ -31,7 +44,7 @@ body {
   margin: 0;
   background: var(--black);
   color: var(--ivory);
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--body-font);
   font-size: var(--body-size);
   line-height: 1.6;
 }
@@ -43,6 +56,12 @@ body.nav-open {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 4px;
 }
 
 img {
@@ -114,7 +133,7 @@ img {
 
 .brand-mark span {
   color: var(--ivory);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 28px;
   font-weight: 700;
   line-height: 1;
@@ -137,18 +156,18 @@ img {
 
 .site-nav a,
 .nav-cta {
-  font-size: 11px;
+  font-size: var(--label-size);
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--label-tracking);
   text-transform: uppercase;
 }
 
 .button,
 .text-link {
-  font-family: Inter, Arial, sans-serif;
-  font-size: 12px;
+  font-family: var(--body-font);
+  font-size: var(--cta-size);
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--cta-tracking);
   text-transform: uppercase;
 }
 
@@ -170,7 +189,7 @@ img {
   justify-self: end;
   color: var(--black);
   background: var(--gold);
-  border-radius: 6px;
+  border-radius: var(--radius);
   padding: 12px 22px;
   transition: background 180ms ease;
 }
@@ -188,7 +207,7 @@ img {
   width: 42px;
   height: 42px;
   border: 1px solid var(--graphite);
-  border-radius: 4px;
+  border-radius: var(--radius);
   background: transparent;
   color: var(--ivory);
 }
@@ -246,11 +265,11 @@ img {
   gap: 9px;
   margin: 0 0 20px;
   color: var(--gold);
-  font-family: Inter, Arial, sans-serif;
-  font-size: var(--small-size);
+  font-family: var(--body-font);
+  font-size: var(--label-size);
   font-weight: 800;
   line-height: 1;
-  letter-spacing: 0.11em;
+  letter-spacing: var(--label-tracking);
   text-transform: uppercase;
 }
 
@@ -267,7 +286,7 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-weight: 700;
   line-height: 1.08;
 }
@@ -327,7 +346,7 @@ p {
   min-height: 48px;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: var(--radius);
   padding: 14px 22px;
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
@@ -349,7 +368,8 @@ p {
 
 .button-secondary:hover,
 .button-secondary:focus-visible {
-  border-color: var(--ivory);
+  border-color: var(--gold-line);
+  color: var(--gold);
 }
 
 .button-ghost {
@@ -514,7 +534,7 @@ p {
 .trust-grid strong {
   display: block;
   color: var(--gold);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   margin-bottom: 9px;
   font-size: 38px;
   font-weight: 700;
@@ -783,7 +803,7 @@ p {
 .about-stats-grid strong {
   display: block;
   color: var(--gold);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 38px;
   line-height: 0.9;
 }
@@ -806,7 +826,7 @@ p {
   display: inline-block;
   margin-bottom: 22px;
   color: var(--ivory);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 28px;
   line-height: 1.1;
   letter-spacing: 0;
@@ -868,7 +888,7 @@ p {
 
 .chronicle-year {
   color: var(--gold);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 42px;
   font-weight: 700;
   line-height: 1;
@@ -987,7 +1007,7 @@ p {
   overflow: hidden;
   border: 1px solid rgba(184, 178, 167, 0.1);
   border-radius: 0;
-  background-color: #10100f;
+  background-color: var(--surface-soft);
   background-position: center;
   background-size: 108% 108%;
   cursor: pointer;
@@ -1048,7 +1068,7 @@ p {
 }
 
 .identity-portrait-ie {
-  background-image: linear-gradient(205deg, rgba(117, 86, 34, 0.16), transparent 50%), linear-gradient(155deg, #2f2d2b, #090909);
+  background-image: linear-gradient(205deg, rgba(117, 86, 34, 0.16), transparent 50%), linear-gradient(155deg, #2f2d2b, var(--surface-ink));
 }
 
 .identity-portrait-th {
@@ -1065,7 +1085,7 @@ p {
   left: 18px;
   z-index: 3;
   color: rgba(248, 243, 231, 0.86);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 34px;
   font-weight: 700;
   line-height: 1;
@@ -1140,14 +1160,14 @@ p {
 
 .identity-card-detail strong {
   color: var(--ivory);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 25px;
   line-height: 1.08;
 }
 
 .identity-card-detail em {
   color: rgba(248, 243, 231, 0.78);
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--body-font);
   font-size: 10px;
   font-style: normal;
   line-height: 1.55;
@@ -1428,7 +1448,7 @@ p {
 .project-portfolio-image {
   position: relative;
   overflow: hidden;
-  background: #090909;
+  background: var(--surface-ink);
 }
 
 .projects-featured-media::after,
@@ -1616,7 +1636,7 @@ p {
   color: var(--gold);
   cursor: pointer;
   padding: 0;
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--body-font);
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.15em;
@@ -2226,7 +2246,7 @@ p {
 .service-row h3 {
   margin: 0;
   padding-top: 2px;
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--body-font);
   font-size: 12px;
   letter-spacing: 0.05em;
 }
@@ -2570,7 +2590,7 @@ p {
   display: block;
   margin-top: 14px;
   color: var(--ivory);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: clamp(14px, 0.95vw, 18px);
   font-weight: 700;
   letter-spacing: 0;
@@ -2643,7 +2663,7 @@ p {
 
 .direct-lines h2 {
   color: var(--gold);
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--body-font);
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -3010,7 +3030,7 @@ p {
 
 .client-card strong {
   color: var(--ivory);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 24px;
   line-height: 1;
 }
@@ -3068,7 +3088,7 @@ p {
   background:
     radial-gradient(circle at 18% 42%, rgba(215, 173, 69, 0.035), transparent 34%),
     radial-gradient(circle at 78% 62%, rgba(248, 243, 231, 0.025), transparent 32%),
-    #0b0b0a;
+    var(--surface-deep);
 }
 
 .home-services-section::before {
@@ -3178,7 +3198,7 @@ p {
   border-left: 1px solid rgba(184, 178, 167, 0.56);
   color: var(--gray);
   padding: 5px 0 5px 24px;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 16px;
   font-style: italic;
   line-height: 1.65;
@@ -3313,7 +3333,7 @@ p {
   margin-bottom: 34px;
   border: 1px solid rgba(215, 173, 69, 0.18);
   border-radius: 50%;
-  background: #070707;
+  background: var(--black);
   color: var(--gold);
 }
 
@@ -3512,7 +3532,7 @@ p {
 
 .impact-benefits-list h3 {
   color: var(--gold);
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--body-font);
   font-size: 13px;
   font-weight: 800;
   line-height: 1.25;
@@ -3574,7 +3594,7 @@ p {
 .impact-mini-metric strong {
   display: block;
   color: var(--gold);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 30px;
   line-height: 0.9;
 }
@@ -3591,7 +3611,7 @@ p {
   background:
     radial-gradient(circle at 76% 38%, rgba(215, 173, 69, 0.025), transparent 28%),
     radial-gradient(circle at 20% 86%, rgba(248, 243, 231, 0.018), transparent 32%),
-    #0b0b0a;
+    var(--surface-deep);
 }
 
 .featured-campaigns-header {
@@ -3626,7 +3646,7 @@ p {
 .campaign-label {
   margin: 0;
   color: var(--gold);
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--body-font);
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.13em;
@@ -3685,7 +3705,7 @@ p {
 
 .campaign-details div:last-child dd {
   color: var(--gold);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 22px;
   font-weight: 700;
 }
@@ -3784,7 +3804,7 @@ p {
   position: relative;
   height: 190px;
   overflow: hidden;
-  background-color: #101010;
+  background-color: var(--surface-panel);
   background-position: center;
   background-size: cover;
 }
@@ -3922,7 +3942,7 @@ p {
 
 .impact-number strong {
   color: var(--gold);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 56px;
   line-height: 1;
 }
@@ -3948,7 +3968,7 @@ p {
 
 .impact-benefits h3 {
   margin-top: 14px;
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--body-font);
   font-size: 13px;
   font-weight: 800;
   line-height: 1.25;
@@ -4074,7 +4094,7 @@ p {
   overflow: hidden;
   border: 1px solid var(--graphite);
   border-radius: 4px;
-  background: #0f0f0f;
+  background: var(--surface-card);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
   transform: translate(-50%, -50%);
 }
@@ -4105,7 +4125,7 @@ p {
   overflow: hidden;
   border: 1px solid var(--graphite);
   border-radius: 4px;
-  background-color: #101010;
+  background-color: var(--surface-panel);
 }
 
 .work-image {
@@ -4124,7 +4144,7 @@ p {
   background:
     radial-gradient(circle at 50% 36%, rgba(215, 173, 69, 0.16), transparent 14%),
     linear-gradient(135deg, transparent 0 28%, rgba(248, 243, 231, 0.08) 29% 30%, transparent 31%),
-    linear-gradient(180deg, #262626, #0f0f0f);
+    linear-gradient(180deg, #262626, var(--surface-card));
 }
 
 .web-proof {
@@ -4149,7 +4169,7 @@ p {
   display: inline-block;
   margin-top: 12px;
   color: var(--gold);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 32px;
 }
 
@@ -4199,7 +4219,7 @@ p {
 .set-edit {
   background:
     linear-gradient(90deg, var(--gold) 0 22%, transparent 22% 28%, rgba(248, 243, 231, 0.18) 28% 58%, transparent 58%),
-    #101010;
+    var(--surface-panel);
 }
 
 .set-launch {
@@ -4375,7 +4395,7 @@ p {
   margin: 66px 0 0;
   padding-top: 24px;
   color: rgba(248, 243, 231, 0.9);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: clamp(24px, 2.7vw, 38px);
   line-height: 1.3;
 }
@@ -4403,7 +4423,7 @@ p {
   background:
     radial-gradient(circle at 50% 18%, rgba(248, 243, 231, 0.28), transparent 8%),
     linear-gradient(180deg, transparent 34%, rgba(215, 173, 69, 0.18) 35% 56%, transparent 57%),
-    linear-gradient(145deg, #252525, #0f0f0f);
+    linear-gradient(145deg, #252525, var(--surface-card));
 }
 
 .portrait-two {
@@ -4433,7 +4453,7 @@ p {
   overflow: hidden;
   border: 1px solid rgba(184, 178, 167, 0.12);
   border-radius: 0;
-  background: #0c0c0b;
+  background: var(--surface-card-deep);
   padding: 0;
   outline: none;
   transition: border-color 360ms ease-out, box-shadow 420ms ease-out, transform 360ms ease-out;
@@ -4592,7 +4612,7 @@ p {
 .footer-brand > p {
   max-width: 430px;
   color: var(--ivory);
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--display-font);
   font-size: 20px;
   font-style: italic;
   line-height: 1.45;
@@ -4676,11 +4696,11 @@ p {
   grid-template-columns: minmax(220px, 0.7fr) minmax(220px, 0.7fr) minmax(280px, 0.8fr);
   gap: 68px;
   padding: 48px 0 76px;
-  border-bottom: 1px solid rgba(37, 37, 37, 0.85);
+  border-bottom: 1px solid var(--line);
 }
 
 .footer-middle p {
-  color: var(--ivory);
+  color: var(--gray);
   font-size: 13px;
 }
 
@@ -4721,6 +4741,135 @@ p {
   height: 10px;
   background: var(--gold);
   content: "";
+}
+
+/* Shared editorial typography and interaction normalization */
+.projects-kicker,
+.projects-category,
+.service-catalog-label,
+.campaign-label,
+.home-services-audience,
+.contact-strip-grid span,
+.direct-lines dt,
+.contact-form legend,
+.contact-form label span,
+.contact-form-group-label,
+.contact-cta-link,
+.about-value-item > span,
+.about-capabilities-list > article > span,
+.about-clients-grid > article > span,
+.about-stats-grid span,
+.home-services-list article > span,
+.service-proof,
+.footer-form label,
+.footer-column h3,
+.footer-middle h3 {
+  color: var(--gold);
+  font-family: var(--body-font);
+  font-size: var(--label-size);
+  font-weight: 700;
+  letter-spacing: var(--label-tracking);
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.project-card-link,
+.campaign-link,
+.service-social-project .text-link,
+.service-production-proof .text-link,
+.contact-cta-link,
+.project-dialog-close,
+.services-category-nav a,
+.footer-form button {
+  font-family: var(--body-font);
+  font-size: var(--label-size);
+  font-weight: 700;
+  letter-spacing: var(--cta-tracking);
+  text-transform: uppercase;
+}
+
+.identity-card-detail small,
+.team-card-copy span,
+.about-value-item small,
+.service-row button span,
+.service-panel-grid span,
+.service-specialized-grid span,
+.service-production-section .service-panel-grid-four span,
+.service-social-project figcaption span,
+.project-dialog-label,
+.impact-mini-metric span,
+.campaign-details dt,
+.office-coordinate,
+.office-location,
+.client-brief-number,
+.direct-lines h2,
+.footer-bottom {
+  font-family: var(--body-font);
+  font-size: var(--label-size);
+  font-weight: 700;
+  letter-spacing: var(--label-tracking);
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.identity-card-detail em {
+  color: var(--muted-light);
+  font-family: var(--body-font);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.brand-foundation-copy p {
+  color: var(--gray);
+  font-family: var(--body-font);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.projects-filter-rail button,
+.contact-form fieldset label {
+  font-family: var(--body-font);
+  font-size: var(--label-size);
+  font-weight: 700;
+  letter-spacing: var(--cta-tracking);
+}
+
+.section-header > p:last-child,
+.featured-campaigns-header > p:last-child,
+.projects-featured-description,
+.service-catalog-intro,
+.home-services-positioning > p:first-child,
+.client-brief-summary,
+.contact-form-heading p,
+.about-editorial-header > p:last-child,
+.about-capabilities-heading > p:last-child {
+  color: var(--gray);
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  line-height: 1.7;
+}
+
+.project-portfolio-card > p:not(.projects-category),
+.service-panel-grid p,
+.service-specialized-grid p,
+.campaign-feature-copy > p:not(.campaign-label),
+.selected-campaign > p:not(.campaign-label),
+.impact-benefits-list p,
+.home-services-list p,
+.about-value-item p,
+.about-capabilities-list p,
+.about-clients-grid p,
+.team-card-copy p,
+.office-card p,
+.direct-lines dd {
+  color: var(--gray);
+  font-family: var(--body-font);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.footer-column > span {
+  color: var(--gray);
 }
 
 @media (min-width: 1600px) {
@@ -4816,7 +4965,7 @@ p {
     align-items: stretch;
     gap: 0;
     border: 1px solid var(--graphite);
-    border-radius: 12px;
+    border-radius: var(--radius);
     background: rgba(7, 7, 7, 0.98);
     padding: 12px;
   }
