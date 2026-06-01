@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Explore Avietho Digital Marketing services across digital PR, social media marketing, website development, multimedia branding, video, and live streaming."
+      content="Explore Avietho Digital Marketing services across digital PR, social media, video production, post-production, live streaming, and specialized technical solutions."
     >
     <title>Services | Avietho Digital Marketing</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
     >
     <link rel="stylesheet" href="./styles.css">
   </head>
-  <body>
+  <body class="services-page">
     <header class="site-header" data-header>
       <a class="brand-mark" href="./index.html" aria-label="Avietho Digital Marketing home">
         <img class="brand-logo" src="./assets/avietho-digital-logo.png" alt="Avietho Digital">
@@ -36,86 +36,174 @@
     </header>
 
     <main id="top">
-      <section class="page-hero section-black">
-        <div class="container page-hero-grid">
-          <div>
-            <p class="eyebrow">Services</p>
-            <h1>Marketing services built for <em>visibility</em> and trust.</h1>
-          </div>
-          <p>
-            Avietho helps brands plan, create, publish, and measure the work that makes them easier to notice, understand, and contact.
-          </p>
+      <section class="page-hero section-black services-hero">
+        <div class="container">
+          <p class="eyebrow">ADMS &middot; Services</p>
+          <h1>Marketing services built for visibility, trust, and public influence.</h1>
+          <p>Comprehensive digital marketing solutions tailored to elevate your brand presence and drive results.</p>
         </div>
       </section>
 
-      <section class="section section-charcoal">
-        <div class="container service-detail-list">
-          <article class="service-detail-card service-detail-featured">
-            <div>
-              <p class="eyebrow">Core Service</p>
-              <h2>Digital PR</h2>
-              <p>Strategic reputation management, online crisis communication, and narrative shaping to build public trust and stakeholder confidence.</p>
+      <nav class="services-category-nav" aria-label="Service categories">
+        <div class="container">
+          <a class="is-active" href="#digital-pr">01. Digital PR</a>
+          <a href="#social-media">02. Social Media</a>
+          <a href="#video-production">03. Video Production</a>
+          <a href="#post-production">04. Post-Production</a>
+          <a href="#live-streaming">05. Live Streaming</a>
+          <a href="#specialized">06. Specialized</a>
+        </div>
+      </nav>
+
+      <section class="section service-catalog-section section-charcoal" id="digital-pr">
+        <div class="container service-split">
+          <div class="service-catalog-copy">
+            <p class="service-catalog-label">01 / Digital PR</p>
+            <h2>Online Media Relations</h2>
+            <p class="service-catalog-intro">Positioning your brand at the center of critical conversations through elite media networks.</p>
+            <div class="service-row-list">
+              <article class="service-row is-active" data-service-row>
+                <button type="button" aria-expanded="true"><span>01</span><strong>Online Media Relations</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Online Media Relations and Link Building</h3><p>This service focuses on securing mentions and coverage in online publications, news sites, and industry blogs. It also helps acquire high-quality backlinks that support search engine optimization.</p></div>
+              </article>
+              <article class="service-row" data-service-row>
+                <button type="button" aria-expanded="false"><span>02</span><strong>Influencer Marketing</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Influencer Marketing and Outreach</h3><p>We help brands and personalities connect with relevant online influencers to reach target audiences through trusted sources.</p></div>
+              </article>
+              <article class="service-row" data-service-row>
+                <button type="button" aria-expanded="false"><span>03</span><strong>Reputation Management</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Online Reputation Management</h3><p>We focus on monitoring, managing, and improving a brand's public perception across digital platforms.</p></div>
+              </article>
+              <article class="service-row" data-service-row>
+                <button type="button" aria-expanded="false"><span>04</span><strong>Content Creation &amp; PR</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Digital Content Creation and Distribution</h3><p>Creating content specifically designed to be shared online, attract media attention, and engage target audiences.</p></div>
+              </article>
+              <article class="service-row" data-service-row>
+                <button type="button" aria-expanded="false"><span>05</span><strong>Social Media PR</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Social Media PR and Community Management</h3><p>PR support for using social platforms to strengthen brand reputation, communication, and community response.</p></div>
+              </article>
             </div>
-            <ul class="clean-list">
-              <li>Reputation management and narrative shaping</li>
-              <li>Online crisis communication</li>
-              <li>Media visibility and stakeholder confidence</li>
-              <li>Public-facing campaign direction</li>
-            </ul>
-          </article>
-
-          <article class="service-detail-card">
-            <h2>Digital &amp; Social Media Marketing</h2>
-            <p>Data-driven campaigns designed to engage audiences, grow communities, and amplify your message across major platforms.</p>
-          </article>
-          <article class="service-detail-card">
-            <h2>Website Development</h2>
-            <p>Secure, user-friendly digital hubs that serve as the foundation of your online identity and operational presence.</p>
-          </article>
-          <article class="service-detail-card">
-            <h2>Multimedia &amp; Branding</h2>
-            <p>Brand identity, graphics, and visual assets crafted to make campaigns stand out across digital channels.</p>
-          </article>
-          <article class="service-detail-card">
-            <h2>Video &amp; Live Streaming</h2>
-            <p>Professional video production and real-time broadcasting built to connect with audiences directly and powerfully.</p>
-          </article>
+          </div>
+          <figure class="service-catalog-media"><img src="./assets/proof-sample-1.png" alt="Online media relations campaign visual"></figure>
         </div>
       </section>
 
-      <section class="section section-black">
-        <div class="container section-header section-header-wide">
-          <p class="eyebrow">How Engagement Starts</p>
-          <h2>Clear scope. Strong content. Measurable action.</h2>
-          <p>Each service can stand alone or combine into a focused campaign package depending on the brand's goal, timeline, and audience.</p>
+      <section class="section service-catalog-section section-black" id="social-media">
+        <div class="container service-split service-split-reverse">
+          <figure class="service-catalog-media"><img src="./assets/avietho-facebook-proof.png" alt="Social media campaign dashboard visual"></figure>
+          <div class="service-catalog-copy">
+            <p class="service-catalog-label">02 / Social Media</p>
+            <h2>Strategy &amp; Growth</h2>
+            <p class="service-catalog-intro">Transforming social platforms into powerful engines of engagement and brand loyalty.</p>
+            <div class="service-panel-grid">
+              <article tabindex="0"><span>01</span><h3>Strategy &amp; Planning</h3><strong>Social Media Strategy and Planning</strong><p>Before any content is published, strategic services define the overall approach and goals for social media presence.</p></article>
+              <article tabindex="0"><span>02</span><h3>Content Creation</h3><strong>Content Creation and Curation</strong><p>Development and sourcing of visual and written content published across social media channels.</p></article>
+              <article tabindex="0"><span>03</span><h3>Community Management</h3><strong>Community Management and Engagement</strong><p>Focused on interacting with the audience and managing the brand's online reputation in real time.</p></article>
+              <article tabindex="0"><span>04</span><h3>Analytics &amp; Reporting</h3><strong>Analytics and Reporting</strong><p>Insights into social media performance that guide future strategy.</p></article>
+            </div>
+          </div>
         </div>
-        <div class="container package-grid">
-          <article class="package-card">
-            <span class="tag">Visibility</span>
-            <h3>Social Presence Build</h3>
-            <p>Best for brands that need a stronger content rhythm and a sharper public face.</p>
-          </article>
-          <article class="package-card">
-            <span class="tag">Launch</span>
-            <h3>Campaign Sprint</h3>
-            <p>Best for product, service, event, or brand launches that need coordinated content and PR.</p>
-          </article>
-          <article class="package-card">
-            <span class="tag">Trust</span>
-            <h3>Website & Proof System</h3>
-            <p>Best for brands that need a credible destination before sending traffic or inquiries there.</p>
-          </article>
+      </section>
+
+      <section class="section service-catalog-section section-charcoal" id="video-production">
+        <div class="container">
+          <header class="service-catalog-header">
+            <p class="service-catalog-label">03 / Production</p>
+            <h2>Cinematic Storytelling</h2>
+            <p>High-end video production that captures the essence of your brand with unmatched visual fidelity.</p>
+          </header>
+          <figure class="service-catalog-media service-catalog-media-wide"><img src="./assets/sample 1.png" alt="Video production studio visual"></figure>
+          <div class="service-panel-grid service-panel-grid-four">
+            <article tabindex="0"><span>01</span><h3>Corporate Video</h3><strong>Corporate Video Production</strong><p>Professional video production services for corporate messaging, branding, training, and promotional content.</p></article>
+            <article tabindex="0"><span>02</span><h3>Event Videography</h3><strong>Event Videography</strong><p>Capturing live events such as conferences, weddings, concerts, and public speeches, including highlight reels and same-day edits.</p></article>
+            <article tabindex="0"><span>03</span><h3>Commercials</h3><strong>Commercials and Advertising</strong><p>Production of television commercials, digital video ads, and social media campaigns.</p></article>
+            <article tabindex="0"><span>04</span><h3>Documentary</h3><strong>Documentary Production</strong><p>Creating compelling documentary content that tells important stories with depth and authenticity.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section service-catalog-section section-black" id="post-production">
+        <div class="container service-split">
+          <div class="service-catalog-copy">
+            <p class="service-catalog-label">04 / Post-Production</p>
+            <h2>Refining the Vision</h2>
+            <p class="service-catalog-intro">Where raw footage becomes a finished story through meticulous editing and technical excellence.</p>
+            <div class="service-row-list">
+              <article class="service-row is-active" data-service-row>
+                <button type="button" aria-expanded="true"><span>01</span><strong>Video Editing</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Video Editing</h3><p>Assembling and organizing footage, cutting, and sequencing to create a polished final product.</p></div>
+              </article>
+              <article class="service-row" data-service-row>
+                <button type="button" aria-expanded="false"><span>02</span><strong>Color Grading</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Color Grading</h3><p>Adjusting the color and tone of the video to create a specific mood or aesthetic.</p></div>
+              </article>
+              <article class="service-row" data-service-row>
+                <button type="button" aria-expanded="false"><span>03</span><strong>Sound Design</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Sound Design and Mixing</h3><p>Enhancing audio quality, adding sound effects, and mixing music and dialogue for professional results.</p></div>
+              </article>
+              <article class="service-row" data-service-row>
+                <button type="button" aria-expanded="false"><span>04</span><strong>Motion Graphics</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Motion Graphics and Animation</h3><p>Creating animated graphics, explainer videos, animated logos, and typography for dynamic visual communication.</p></div>
+              </article>
+            </div>
+          </div>
+          <figure class="service-catalog-media"><img src="./assets/proof-sample-3.png" alt="Post-production editing interface visual"></figure>
+        </div>
+      </section>
+
+      <section class="section service-catalog-section section-charcoal" id="live-streaming">
+        <div class="container service-split service-split-reverse">
+          <figure class="service-catalog-media"><img src="./assets/proof-sample-2.png" alt="Live streaming production visual"></figure>
+          <div class="service-catalog-copy">
+            <p class="service-catalog-label">05 / Live Streaming</p>
+            <h2>Real-Time Interaction</h2>
+            <p class="service-catalog-intro">Flawless, multi-cam broadcast solutions for a digital-first audience.</p>
+            <div class="service-row-list">
+              <article class="service-row is-active" data-service-row>
+                <button type="button" aria-expanded="true"><span>01</span><strong>Social Media Streaming</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Social Media and General Purpose Live Streaming</h3><p>Live broadcasting services across major social media platforms to reach and engage your audience in real time.</p></div>
+              </article>
+              <article class="service-row" data-service-row>
+                <button type="button" aria-expanded="false"><span>02</span><strong>Gaming Streaming</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Gaming and Interactive Streaming</h3><p>Specialized streaming services for gaming content and interactive experiences with professional quality and audience engagement.</p></div>
+              </article>
+              <article class="service-row" data-service-row>
+                <button type="button" aria-expanded="false"><span>03</span><strong>Business Streaming</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Professional and Business Streaming</h3><p>Webinars, virtual meetings, and corporate events streamed with high production value and technical reliability.</p></div>
+              </article>
+              <article class="service-row" data-service-row>
+                <button type="button" aria-expanded="false"><span>04</span><strong>Enterprise Events</strong><i aria-hidden="true">&rarr;</i></button>
+                <div><h3>Enterprise and High-Scale Event Streaming</h3><p>Large-scale streaming solutions for major corporate events, conferences, and product launches with global reach.</p></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section service-catalog-section section-black" id="specialized">
+        <div class="container">
+          <header class="service-catalog-header">
+            <p class="service-catalog-label">06 / Specialized</p>
+            <h2>Niche Technical Solutions</h2>
+            <p>Focused technical and creative services for aerial footage, accessible content, video visibility, and information-led storytelling.</p>
+          </header>
+          <div class="service-specialized-grid">
+            <article tabindex="0"><span>01</span><h3>Drone Videography</h3><strong>Drone Videography</strong><p>Capturing stunning aerial footage for unique perspectives and breathtaking views using state-of-the-art drone technology.</p></article>
+            <article tabindex="0"><span>02</span><h3>Accessibility Services</h3><strong>Accessibility Services</strong><p>Providing closed captioning, subtitles, and audio descriptions for videos to meet accessibility standards.</p></article>
+            <article tabindex="0"><span>03</span><h3>Video Marketing &amp; SEO</h3><strong>Video Marketing and SEO</strong><p>Optimizing videos for search engines, analyzing video performance, and managing video advertising campaigns.</p></article>
+            <article tabindex="0"><span>04</span><h3>Strategic Infographics</h3><strong>Infographics and Infonarrative Videos</strong><p>Creating visual information pieces and infonarrative videos that explain complex ideas clearly and make content easier to understand, share, and remember.</p></article>
+          </div>
         </div>
       </section>
 
       <section class="section final-cta section-black">
         <div class="container cta-panel">
           <p class="eyebrow">Start a Campaign</p>
-          <h2>Need a service mix built around your brand?</h2>
-          <p>Start with a focused conversation about your goals, audience, and current visibility gaps.</p>
+          <h2>Ready to turn attention into action?</h2>
+          <p>Start with the campaign goal. ADMS will help shape the strategy, content, production, and digital path around it.</p>
           <div class="button-row">
-            <a class="button button-primary" href="mailto:hello@aviethodigital.com?subject=Services%20Inquiry">Send Inquiry</a>
-            <a class="button button-secondary" href="./projects.html">View Our Projects</a>
+            <a class="button button-primary" href="./contact.html">Start a Campaign</a>
+            <a class="button button-secondary" href="./projects.html">View Projects</a>
           </div>
         </div>
       </section>

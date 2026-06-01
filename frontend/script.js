@@ -122,6 +122,66 @@ const initProjectFilters = () => {
   });
 };
 
+const initServicesCatalog = () => {
+  const rows = [...document.querySelectorAll("[data-service-row]")];
+  const navLinks = [...document.querySelectorAll(".services-category-nav a")];
+  const sections = navLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  rows.forEach((row) => {
+    const button = row.querySelector("button");
+
+    button?.addEventListener("click", () => {
+      const list = row.closest(".service-row-list");
+      const willActivate = !row.classList.contains("is-active");
+
+      list?.querySelectorAll("[data-service-row]").forEach((item) => {
+        const isActive = item === row && willActivate;
+        item.classList.toggle("is-active", isActive);
+        item.querySelector("button")?.setAttribute("aria-expanded", String(isActive));
+      });
+    });
+  });
+
+  if (!navLinks.length || !sections.length || !("IntersectionObserver" in window)) {
+    return;
+  }
+
+  const setActiveLink = (section) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle("is-active", link.getAttribute("href") === `#${section.id}`);
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visible) {
+        setActiveLink(visible.target);
+      }
+    },
+    {
+      rootMargin: "-18% 0px -62% 0px",
+      threshold: [0, 0.08, 0.2],
+    },
+  );
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const section = document.querySelector(link.getAttribute("href"));
+
+      if (section) {
+        setActiveLink(section);
+      }
+    });
+  });
+  sections.forEach((section) => observer.observe(section));
+};
+
 const initProjectDetails = () => {
   const dialog = document.querySelector("[data-project-dialog]");
   const openButtons = [...document.querySelectorAll("[data-project-open]")];
@@ -283,7 +343,8 @@ const initScrollReveal = () => {
   addRevealClasses(".clients-section .section-header, .home-services-heading, .home-services-positioning, .impact-media-column, .featured-campaigns-header, .section-header, .contact-form-heading");
   addRevealClasses(".client-brief-label, .client-brief-headline, .client-brief-summary, .client-brief-closing", "reveal-up", true);
   addRevealClasses(".home-services-list > article, .impact-benefits-list > article, .selected-campaign, .service-detail-card, .package-card, .project-case, .project-portfolio-card, .masonry-card, .team-card, .chronicle-item, .client-brief-item, .about-value-item, .about-capabilities-list > article, .about-clients-grid > article", "reveal-up", true);
-  addRevealClasses(".home-services-pr, .campaign-feature, .identity-intro, .identity-portraits, .brand-foundation-heading, .brand-foundation-copy, .about-editorial-header, .about-capabilities-heading, .about-copy, .office-card, .direct-lines, .contact-form, .cta-panel");
+  addRevealClasses(".service-catalog-header, .service-catalog-copy, .service-catalog-media, .home-services-pr, .campaign-feature, .identity-intro, .identity-portraits, .brand-foundation-heading, .brand-foundation-copy, .about-editorial-header, .about-capabilities-heading, .about-copy, .office-card, .direct-lines, .contact-form, .cta-panel");
+  addRevealClasses(".service-panel-grid > article, .service-specialized-grid > article", "reveal-up", true);
   addRevealClasses(".home-services-divider, .client-brief-divider", "reveal-line");
   addRevealClasses(".contact-form > fieldset, .contact-field-grid, .message-field, .contact-submit-row", "reveal-up", true);
   addRevealClasses(".footer-top > *, .footer-middle > *, .footer-bottom", "reveal-up", true);
@@ -325,6 +386,7 @@ const initScrollReveal = () => {
 
 initIdentitySection();
 initProjectFilters();
+initServicesCatalog();
 initProjectDetails();
 initTeamCards();
 initScrollReveal();
