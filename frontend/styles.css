@@ -2258,6 +2258,12 @@ p {
   line-height: 1.72;
 }
 
+#digital-pr .service-row h3,
+#post-production .service-row h3,
+#live-streaming .service-row h3 {
+  margin-left: 40px;
+}
+
 .service-panel-grid,
 .service-specialized-grid {
   display: grid;
@@ -2486,6 +2492,14 @@ p {
 
 .service-specialized-grid {
   margin-top: 52px;
+  border-top: 0;
+}
+
+.service-specialized-grid article,
+.service-specialized-grid article:nth-child(even),
+.service-specialized-grid article:hover,
+.service-specialized-grid article:focus-visible {
+  border: 0;
 }
 
 .contact-page {
@@ -5381,6 +5395,12 @@ p {
   }
 
   .service-row p {
+    margin-left: 0;
+  }
+
+  #digital-pr .service-row h3,
+  #post-production .service-row h3,
+  #live-streaming .service-row h3 {
     margin-left: 0;
   }
 
