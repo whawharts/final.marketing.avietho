@@ -1592,6 +1592,20 @@ p {
   margin-top: 44px;
 }
 
+.projects-empty-state {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--gray);
+  font-size: 16px;
+}
+
+.projects-index.is-filtered .reveal-card,
+.projects-index.is-filtered .reveal-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0ms;
+}
+
 .project-portfolio-card {
   border-top: 1px solid rgba(184, 178, 167, 0.22);
   padding-top: 16px;
@@ -3844,20 +3858,20 @@ p {
 .selected-video {
   background-image:
     linear-gradient(rgba(7, 7, 7, 0.16), rgba(7, 7, 7, 0.54)),
-    url("./assets/sample 1.png");
+    url("/assets/sample 1.png");
 }
 
 .selected-pr {
   background-image:
     linear-gradient(rgba(7, 7, 7, 0.16), rgba(7, 7, 7, 0.54)),
-    url("./assets/sample 2.png");
+    url("/assets/sample 2.png");
   background-position: top center;
 }
 
 .selected-web {
   background-image:
     linear-gradient(rgba(7, 7, 7, 0.16), rgba(7, 7, 7, 0.54)),
-    url("./assets/sample 3.png");
+    url("/assets/sample 3.png");
   background-position: top center;
 }
 
@@ -4149,7 +4163,7 @@ p {
 .social-proof {
   background:
     linear-gradient(rgba(7, 7, 7, 0.3), rgba(7, 7, 7, 0.9)),
-    url("./assets/avietho-concept-screen.png");
+    url("/assets/avietho-concept-screen.png");
   background-position: top center;
   background-size: cover;
 }
@@ -5867,71 +5881,105 @@ p {
   }
 }
 
-.reveal {
-  --reveal-delay: 0ms;
-  --reveal-duration: 760ms;
-  --reveal-x: 0;
-  --reveal-y: 24px;
-  --reveal-scale: 1;
-}
-
-.reveal-ready .reveal {
+.reveal-card {
   opacity: 0;
-  transform: translate3d(var(--reveal-x), var(--reveal-y), 0) scale(var(--reveal-scale));
+  transform: translateY(24px);
   transition:
-    opacity var(--reveal-duration) ease-out var(--reveal-delay),
-    transform var(--reveal-duration) ease-out var(--reveal-delay);
+    opacity 600ms ease,
+    transform 600ms ease;
+  will-change: opacity, transform;
 }
 
-.reveal-ready .reveal.is-visible {
+.reveal-card.is-visible {
   opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
+  transform: translateY(0);
 }
 
-.reveal-left {
-  --reveal-x: -20px;
-  --reveal-y: 0;
+.card-grid .reveal-card:nth-child(1),
+.home-services-list .reveal-card:nth-child(1),
+.trust-grid .reveal-card:nth-child(1),
+.about-stats-grid .reveal-card:nth-child(1),
+.impact-benefits-list .reveal-card:nth-child(1),
+.selected-campaign-grid .reveal-card:nth-child(1),
+.projects-index .reveal-card:nth-child(1),
+.service-panel-grid .reveal-card:nth-child(1),
+.service-specialized-grid .reveal-card:nth-child(1),
+.about-values-grid .reveal-card:nth-child(1),
+.about-capabilities-list .reveal-card:nth-child(1),
+.about-clients-grid .reveal-card:nth-child(1),
+.team-grid .reveal-card:nth-child(1),
+.client-brief-grid .reveal-card:nth-child(1),
+.chronicle-timeline .reveal-card:nth-child(1) {
+  transition-delay: 0ms;
 }
 
-.reveal-right {
-  --reveal-x: 20px;
-  --reveal-y: 0;
+.card-grid .reveal-card:nth-child(2),
+.home-services-list .reveal-card:nth-child(2),
+.trust-grid .reveal-card:nth-child(2),
+.about-stats-grid .reveal-card:nth-child(2),
+.impact-benefits-list .reveal-card:nth-child(2),
+.selected-campaign-grid .reveal-card:nth-child(2),
+.projects-index .reveal-card:nth-child(2),
+.service-panel-grid .reveal-card:nth-child(2),
+.service-specialized-grid .reveal-card:nth-child(2),
+.about-values-grid .reveal-card:nth-child(2),
+.about-capabilities-list .reveal-card:nth-child(2),
+.about-clients-grid .reveal-card:nth-child(2),
+.team-grid .reveal-card:nth-child(2),
+.client-brief-grid .reveal-card:nth-child(2),
+.chronicle-timeline .reveal-card:nth-child(2) {
+  transition-delay: 80ms;
 }
 
-.reveal-fade {
-  --reveal-y: 0;
+.card-grid .reveal-card:nth-child(3),
+.home-services-list .reveal-card:nth-child(3),
+.trust-grid .reveal-card:nth-child(3),
+.about-stats-grid .reveal-card:nth-child(3),
+.impact-benefits-list .reveal-card:nth-child(3),
+.selected-campaign-grid .reveal-card:nth-child(3),
+.projects-index .reveal-card:nth-child(3),
+.service-panel-grid .reveal-card:nth-child(3),
+.service-specialized-grid .reveal-card:nth-child(3),
+.about-values-grid .reveal-card:nth-child(3),
+.about-capabilities-list .reveal-card:nth-child(3),
+.about-clients-grid .reveal-card:nth-child(3),
+.team-grid .reveal-card:nth-child(3),
+.client-brief-grid .reveal-card:nth-child(3),
+.chronicle-timeline .reveal-card:nth-child(3) {
+  transition-delay: 160ms;
 }
 
-.reveal-scale {
-  --reveal-y: 18px;
-  --reveal-scale: 0.985;
-  --reveal-duration: 880ms;
+.card-grid .reveal-card:nth-child(4),
+.home-services-list .reveal-card:nth-child(4),
+.trust-grid .reveal-card:nth-child(4),
+.about-stats-grid .reveal-card:nth-child(4),
+.impact-benefits-list .reveal-card:nth-child(4),
+.selected-campaign-grid .reveal-card:nth-child(4),
+.projects-index .reveal-card:nth-child(4),
+.service-panel-grid .reveal-card:nth-child(4),
+.service-specialized-grid .reveal-card:nth-child(4),
+.about-values-grid .reveal-card:nth-child(4),
+.about-capabilities-list .reveal-card:nth-child(4),
+.about-clients-grid .reveal-card:nth-child(4),
+.team-grid .reveal-card:nth-child(4),
+.client-brief-grid .reveal-card:nth-child(4),
+.chronicle-timeline .reveal-card:nth-child(4) {
+  transition-delay: 240ms;
 }
 
-.reveal-line {
-  --reveal-y: 0;
-  --reveal-scale: 0.94;
-  transform-origin: left center;
+.reveal-card.is-visible:hover {
+  transform: translateY(-6px);
 }
 
-.delay-1 {
-  --reveal-delay: 80ms;
+.selected-campaign.reveal-card.is-visible:hover,
+.selected-campaign.reveal-card.is-visible:focus-within {
+  transform: translateY(-2px);
 }
 
-.delay-2 {
-  --reveal-delay: 160ms;
-}
-
-.delay-3 {
-  --reveal-delay: 240ms;
-}
-
-.delay-4 {
-  --reveal-delay: 320ms;
-}
-
-.delay-5 {
-  --reveal-delay: 400ms;
+.about-team-section .team-card.reveal-card.is-visible:hover,
+.about-team-section .team-card.reveal-card.is-visible:focus-visible,
+.about-team-section .team-card.reveal-card.is-visible.is-active {
+  transform: translateY(-5px) scale(1.008);
 }
 
 .home-services-list article:focus-visible,
@@ -5945,8 +5993,8 @@ p {
     scroll-behavior: auto;
   }
 
-  .reveal-ready .reveal,
-  .reveal-ready .reveal.is-visible {
+  .reveal-card,
+  .reveal-card.is-visible {
     opacity: 1;
     transform: none;
     transition: none;
